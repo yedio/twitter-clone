@@ -1,4 +1,7 @@
-export const firebaseConfig = {
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
+const firebaseConfig = {
   apiKey: 'AIzaSyCF2AJejVk-4G6MpLD68wwRN6h2tZYx1iQ',
   authDomain: 'ywitter-d2ce3.firebaseapp.com',
   projectId: 'ywitter-d2ce3',
@@ -6,3 +9,9 @@ export const firebaseConfig = {
   messagingSenderId: '755982430240',
   appId: '1:755982430240:web:071c70eea223b7e2040c45',
 };
+
+firebase.initializeApp(firebaseConfig);
+
+export const firebaseInstance = firebase;
+
+export const authService = firebase.auth();
